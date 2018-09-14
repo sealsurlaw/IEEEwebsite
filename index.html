@@ -19,6 +19,8 @@ Pages (One Page):
 -->
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!-- JQuery -->
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
         <script> 
@@ -39,7 +41,8 @@ Pages (One Page):
         <style>
         body {
             margin:0;
-            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;                                         
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            padding-top: 6em;                                      
         }
 
         .icon-bar {
@@ -126,6 +129,17 @@ Pages (One Page):
             text-decoration: none;
         }
 
+        .nav-item {
+            margin-right: 0.5em;
+        }
+
+        .divider {
+            border-width: 2px;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
         #morebutton {
             font-size: 75%;
             width: 30%;
@@ -135,7 +149,7 @@ Pages (One Page):
         }
 
         #contact {
-            font-size: 200%;
+            font-size: 300%;
         }
 
         </style>
@@ -143,64 +157,49 @@ Pages (One Page):
     </head>
 
     <body>
-        <!-- <div class="icon-bar">
-            <a class="active" href="#"><i class="fa fa-home"></i></a> 
-            <a href="#"><i class="far fa-calendar-alt"></i></a>
-            <a href="#"><i class="far fa-calendar-times"></i></a>
-            <a href="#"><i class="far fa-address-card"></i></a>
-            <a href="http://store.ieeesfsu.com"><i class="fas fa-tshirt"></i></a>
-            <a href="mailto:sfsu.ieee@gmail.com"><i class="far fa-envelope"></i></a> 
-            <a href="https://www.facebook.com/groups/ieeesfsu/"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://ieeesfsu.slack.com/"><i class="fab fa-slack-hash"></i></a> 
-        </div> -->
-
-        <!-- Nav Bar -->
-        <!-- <div class="icon-bar">
-            <a href="mailto:sfsu.ieee@gmail.com"><i class="far fa-envelope"></i></a> 
-            <a href="https://ieeesfsu.slack.com/"><i class="fab fa-slack"></i></a> 
-            <a href="https://www.facebook.com/groups/ieeesfsu/"><i class="fab fa-facebook-square"></i></a>
-            <a href="http://store.ieeesfsu.com"><i class="fas fa-tshirt"></i></a>
-        </div> -->
-
-        <!-- Bootstrap Navbar Template??? -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="background-color: white;">
+            <img src="http://os_extranet_images.s3.amazonaws.com/460162_original.png" style="width: 5em;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#officers">Officers</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="http://store.ieeesfsu.com">T-shirts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://donate.ieeesfsu.com">Donate</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.ieee.org/membership/join/index.html">Join</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://ewh.ieee.org/council/sfba/index.html">eGRID</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Xplore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.ieee.org">IEEE.org</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
         </nav>
 
         <!-- Events -->
-        <h1 class="centered">Events</h1>
+        <br>
+        <h1 id="events" class="centered">Events</h1>
 
         <div class="container events">
             <div class="row">
@@ -217,7 +216,7 @@ Pages (One Page):
                     Come join us for our first general metting of the Fall '18 semester! Help us 
                     kick off the new school year with information about topics such as:
                     <ul>
-                        <li>Upcoming IEEE semenars</li>
+                        <li>Upcoming IEEE seminars</li>
                         <li>Discounted t-shirt sales</li>
                         <li>Micromouse</li>
                         <li>IEEExtreme 24 hour coding challenge</li>
@@ -231,12 +230,21 @@ Pages (One Page):
                     We hope to see both new and old members as we welcome in the new semester!
                 </div>
                 <div class="col-lg-4 padded">
-                    <img class="sidepic" src="pics/generalflyer.png">
+                    <img class="sidepic" src="http://os_extranet_images.s3.amazonaws.com/460066_original.png">
                 </div>
             </div>
         </div>
+
+        <br>
+
+        <button id="morebutton" type="button" class="btn btn-primary">Past Events</button>
+
         <!-- HIDDEN -->
         <div class="container events hidden">
+
+
+            <hr class="divider">
+
             <div class="row">
                 <div class="col-lg-3 padded">
                     <h2>Professor Seminars:</h2>
@@ -249,12 +257,21 @@ Pages (One Page):
                     <h4 class="indent2">SCI 164</h4>
                 </div>
                 <div class="col-lg-5 padded">
-
+                    <h4 class="centered">Internet of Things</h4>
+                    <h5 class="centered">Security and Privacy Challenges</h5>
+                    <br>
+                    Come listen to our very own Professor Tehranipoor explain her research into hardware security.
+                    <br><br>
+                    Refreshments and donuts will be provided, so feel free to come by and learn about what your professors work
+                     on outside of the classroom!
                 </div>
                 <div class="col-lg-4 padded">
-                    <img class="sidepic" src="pics/tehranipoor.jpg">
+                    <img class="sidepic" src="http://os_extranet_images.s3.amazonaws.com/460271_original.jpg">
                 </div>
             </div>
+
+            <hr class="divider">
+
             <div class="row">
                 <div class="col-lg-3 padded">
                     <h2>Professor Seminars:</h2>
@@ -267,12 +284,20 @@ Pages (One Page):
                     <h4 class="indent2">SCI 164</h4>
                 </div>
                 <div class="col-lg-5 padded">
-
+                    <h4 class="centered">Electromyography-Based Neural Machine Interface</h4>
+                    <br>
+                    Come listen to our very own Professor Zhang explain her research into neural machine interfacing.
+                    <br><br>
+                    Refreshments and donuts will be provided, so feel free to come by and learn about what your professors work
+                     on outside of the classroom!
                 </div>
                 <div class="col-lg-4 padded">
-                    <img class="sidepic" src="pics/zhang.jpg">
+                    <img class="sidepic" src="http://os_extranet_images.s3.amazonaws.com/460272_original.jpg">
                 </div>
             </div>
+
+            <hr class="divider">
+
             <div class="row">
                 <div class="col-lg-3 padded">
                     <h2>Professor Seminars:</h2>
@@ -285,23 +310,55 @@ Pages (One Page):
                     <h4 class="indent2">SCI 164</h4>
                 </div>
                 <div class="col-lg-5 padded">
-
+                    <h4 class="centered">Scale Space Models in Signal and Image Processing</h4>
+                    <h5 class="centered">Theory and Implementation</h5>
+                    <br>
+                    Come listen to our very own Professor Haji Aboli explain his research into signal and image processing.
+                    <br><br>
+                    Refreshments and donuts will be provided, so feel free to come by and learn about what your professors work
+                     on outside of the classroom!
                 </div>
                 <div class="col-lg-4 padded">
-                    <img class="sidepic" src="pics/haji.jpg">
+                    <img class="sidepic" src="http://os_extranet_images.s3.amazonaws.com/460267_original.jpg">
                 </div>
             </div>
         </div>
 
-        <button id="morebutton" type="button">Past Events</button>
+        <hr class="divider">
+        <br><br>
 
         <!-- Officers -->
-        <h1 class="centered">Officers</h1>
+        <h1 id="officers" class="centered">Officers</h1>
+        <div class="container" style="margin-bottom: 2em; margin-top: 2em;">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <a href="https://www.linkedin.com/in/jcangeles"><img class="rounded-circle officers" src="http://os_extranet_images.s3.amazonaws.com/460413_original.jpg"></a>
+                    <div class="name centered">Dr Fatemeh Tehranipoor</div>
+                    <div class="position centered">Assistant Professor of Electrical and Computer Engineering</div>
+                    <div class="position centered">Advisor</div>
+                    <div class="contacts centered">
+                        <a class="nounderline" href="https://www.linkedin.com/in/fatemeh-tehranipoor-3890b260/">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <span class="separator">|</span>
+                        <a class="nounderline" href="https://scholar.google.com/citations?hl=en&user=puu3Ov0AAAAJ">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <span class="separator">|</span>
+                        <a class="nounderline" href="mailto:tehranipoor@sfsu.edu">
+                            <i class="fas fa-envelope-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md">
                     <div class="square">
-                        <a href="https://www.linkedin.com/in/jcangeles"><img class="rounded-circle officers" src="pics/juan.jpg"></a>
+                        <a href="https://www.linkedin.com/in/jcangeles"><img class="rounded-circle officers" src="http://os_extranet_images.s3.amazonaws.com/460268_original.jpg"></a>
                         <div class="name centered">Juan Angeles</div>
                         <div class="position centered">Chair</div>
                         <div class="contacts centered">
@@ -321,7 +378,7 @@ Pages (One Page):
                 </div>
                 <div class="col-md">
                     <div class="square">
-                        <a href="https://www.linkedin.com/in/cindy-phan/"><img class="rounded-circle officers" src="pics/cindy.jpg"></a>
+                        <a href="https://www.linkedin.com/in/cindy-phan/"><img class="rounded-circle officers" src="http://os_extranet_images.s3.amazonaws.com/460265_original.jpg"></a>
                         <div class="name centered">Cindy Phan</div>
                         <div class="position centered">Vice-Chair</div>
                         <div class="contacts centered">
@@ -341,7 +398,7 @@ Pages (One Page):
                 </div>
                 <div class="col-md">
                     <div class="square">
-                        <a href="https://www.linkedin.com/in/dylan-wright-1016a289/"><img class="rounded-circle officers" src="pics/moses.jpg"></a>
+                        <a href="https://www.linkedin.com/in/dylan-wright-1016a289/"><img class="rounded-circle officers" src="http://os_extranet_images.s3.amazonaws.com/460266_original.jpg"></a>
                         <div class="name centered">Dylan Wright</div>
                         <div class="position centered">Treasurer</div>
                         <div class="contacts centered">
@@ -361,7 +418,7 @@ Pages (One Page):
                 </div>
                 <div class="col-md">
                     <div class="square">
-                        <a href="https://www.linkedin.com/in/andres-gamboa-463b69148/"><img class="rounded-circle officers" src="pics/moses.jpg"></a>
+                        <a href="https://www.linkedin.com/in/andres-gamboa-463b69148/"><img class="rounded-circle officers" src="http://os_extranet_images.s3.amazonaws.com/460171_original.jpg"></a>
                         <div class="name centered">Andres Gamboa</div>
                         <div class="position centered">Secretary</div>
                         <div class="contacts centered">
@@ -375,10 +432,12 @@ Pages (One Page):
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <div class="row">
                 <div class="col-md">
                     <div class="square">
-                        <a href="https://www.linkedin.com/in/madeline-schmoll-86540b150/"><img class="rounded-circle officers" src="pics/maddy.jpg"></a>
+                        <a href="https://www.linkedin.com/in/madeline-schmoll-86540b150/"><img class="rounded-circle officers" src="http://os_extranet_images.s3.amazonaws.com/460264_original.jpg"></a>
                         <div class="name centered">Madeline Schmoll</div>
                         <div class="position centered">Micromouse Lead</div>
                         <div class="contacts centered">
@@ -394,7 +453,7 @@ Pages (One Page):
                 </div>
                 <div class="col-md">
                     <div class="square">
-                        <a href="https://www.linkedin.com/in/karnveer-gill-3b6b41a3/"><img class="rounded-circle officers" src="pics/karnveer.jpg"></a>
+                        <a href="https://www.linkedin.com/in/karnveer-gill-3b6b41a3/"><img class="rounded-circle officers" src="http://os_extranet_images.s3.amazonaws.com/460269_original.jpg"></a>
                         <div class="name centered">Karnveer Gill</div>
                         <div class="position centered">External Outreach Director</div>
                         <div class="contacts centered">
@@ -410,7 +469,7 @@ Pages (One Page):
                 </div>
                 <div class="col-md">
                     <div class="square">
-                        <a href=""><img class="rounded-circle officers" src="pics/moses.jpg"></a>
+                        <a href=""><img class="rounded-circle officers" src="http://os_extranet_images.s3.amazonaws.com/460145_original.jpg"></a>
                         <div class="name centered">Drey Canlas</div>
                         <div class="position centered">Internal Outreach Director</div>
                         <div class="contacts centered">
@@ -422,7 +481,7 @@ Pages (One Page):
                 </div>
                 <div class="col-md">
                     <div class="square">
-                        <a href=""><img class="rounded-circle officers" src="pics/nathan.jpg"></a>
+                        <a href=""><img class="rounded-circle officers" src="http://os_extranet_images.s3.amazonaws.com/460270_original.jpg"></a>
                         <div class="name centered">Nathan Gonzalez</div>
                         <div class="position centered">Solar Car Lead</div>
                         <div class="contacts centered">
@@ -435,9 +494,12 @@ Pages (One Page):
             </div>
         </div>
 
+        <hr class="divider">
+        <br><br>
+
         <!-- Contact -->
         <div id="contact" class="centered">
-            <div style="font-size: 40%">Contact Us?</div>
+            <div style="font-size: 25%">Contact Us?</div>
             <a href="https://www.facebook.com/groups/ieeesfsu/"><i class="fab fa-facebook-square"></i></a>
             <a href="https://ieeesfsu.slack.com/"><i class="fab fa-slack-hash"></i></a> 
             <a href="mailto:sfsu.ieee@gmail.com"><i class="far fa-envelope"></i></a> 
